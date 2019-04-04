@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+@import 'fighters.scss';
+@import 'about.scss';
+@import 'matches.scss';
+@import 'bets.scss';
+@import 'footer.scss';
+@import 'header.scss';
+@import 'popup.scss';
+@import 'main-table.scss';
+

@@ -1,0 +1,33 @@
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 80px;
+  max-width: 1110px;
+  height: 155px;
+  background-color: #f7f7f7;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 960px;
+    .mainlogo {
+      color: #858585;
+      border-left: 2px solid #858585;
+      padding-left: 5px;
+      p {
+        line-height: 1;
+        span {
+          font-size: 12px;
+          font-weight: bold;
+        }
+      }
+    }
+    .copyright {
+      color: #858585;
+      font-size: 13px;
+    }
+  }
+
+}
