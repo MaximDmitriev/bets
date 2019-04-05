@@ -25,6 +25,19 @@ input:focus {
   overflow-x: hidden;
 }
 
+.section {
+  display: flex;
+  justify-content: center;
+}
+
+.wrap {
+  display: flex;
+  width: 960px;
+  &_big {
+    width: 1110px;
+  }
+}
+
 @import 'fighters.scss';
 @import 'about.scss';
 @import 'matches.scss';
@@ -33,4 +46,3 @@ input:focus {
 @import 'header.scss';
 @import 'popup.scss';
 @import 'main-table.scss';
-

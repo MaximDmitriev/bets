@@ -43,41 +43,41 @@
     display: flex;
     justify-content: space-evenly;
   }
-  &__card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 145px;
-    .result {
-      font-size: 12px;
-      font-weight: 900;
-      margin-bottom: 15px;
-      &_win {
-        color: #2bc800;
-      }
-      &_lose {
-        color: #e5330a;
-      }
+}
+.popup-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 145px;
+  &__result {
+    font-size: 12px;
+    font-weight: 900;
+    margin-bottom: 15px;
+    &_win {
+      color: #2bc800;
     }
-    .name {
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 5px;
+    &_lose {
+      color: #e5330a;
     }
-    .country {
-      font-size: 14px;
-      margin-bottom: 27px;
-      img {
-        margin-right: 4px;
-      }
-    }
-    .koef {
-      text-align: center;
-      font-size: 14px;
-      font-weight: 600;
-      span {
-        font-size: 18px;
-      }
-    }
+  }
+  &__name {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  &__country {
+    font-size: 14px;
+    margin-bottom: 27px;
+  }
+  &__icon {
+    margin-right: 4px;
+  }
+  &__koef {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  &__number {
+    font-size: 18px;
   }
 }

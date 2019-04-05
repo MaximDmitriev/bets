@@ -1,8 +1,8 @@
 window.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
-  const navLinks = document.querySelectorAll('.nav-link'),
-        navMenu = document.querySelectorAll('.nav-link__menu');
+  const navLinks = document.querySelectorAll('.header__nav-link'),
+        navMenu = document.querySelectorAll('.header__nav-dropdown');
 
   const hideAll = () => {
     navMenu.forEach(item => item.style.display = 'none');
@@ -29,23 +29,20 @@ window.addEventListener('DOMContentLoaded', () => {
   /////
 
   const columnBtns = document.querySelectorAll('.wrap-btn'),
-        spanText = document.querySelectorAll('.show'),
-        columns = document.querySelectorAll('.matches__content'),
-        wrapper = document.querySelectorAll('.matches__column');
+        spanText = document.querySelectorAll('.wrap-btn__show'),
+        wrapper = document.querySelectorAll('.matches-column');
 
   columnBtns.forEach((item, i) => {
-
+    const matches = wrapper[i].querySelectorAll('.tournament');
     item.addEventListener('click', () => {
       if (spanText[i].textContent === 'спрятать') {
         
-        columns[i].style.display = 'none';
-        wrapper[i].classList.add('matches__column_hide');
+        matches.forEach(item => item.style.display = 'none');
         spanText[i].textContent = 'показать';
         wrapper[i].querySelector('img').style.transform = 'rotate(180deg)';
       }
       else {
-        columns[i].style.display = 'block';
-        wrapper[i].classList.remove('matches__column_hide');
+        matches.forEach(item => item.style.display = 'block');
         spanText[i].textContent = 'спрятать';
         wrapper[i].querySelector('img').style.transform = 'rotate(0deg)';
       }
@@ -57,16 +54,17 @@ window.addEventListener('DOMContentLoaded', () => {
   /////
 
   const popup = document.querySelector('.popup'),
-        rowItems = document.querySelectorAll('.matches__item');
+        rowItems = document.querySelectorAll('.match');
   let show = false;
 
   rowItems.forEach((item) => {
     item.addEventListener('click', () => {
 
       if (!show) {
-        const target = item.parentNode;
-        for (let i = 0; i < columns.length; i++) {
-          if (target === columns[i] && popup) {
+        const target = item.parentNode.parentNode;
+
+        for (let i = 0; i < wrapper.length; i++) {
+          if (target === wrapper[i] && popup) {
             popup.style.left = `${540 - 320 * i}px`;
             popup.style.display = 'flex';
           }

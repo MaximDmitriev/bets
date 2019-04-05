@@ -1,8 +1,6 @@
 .about {
   position: relative;
   display: flex;
-  max-width: 960px;
-  margin: 0 auto;
   &__status {
     position: absolute;
     padding-bottom: 5px;
@@ -30,117 +28,126 @@
     flex-direction: column;
     flex-basis: 50%;
     align-items: center;
-    .info {
-      position: relative;
-      background-color: rgb(97, 214, 65);
-      width: 327px;
-      height: 71px;
-      margin-bottom: 50px;
-      color: #ffffff;
-      text-transform: uppercase;
-      font-size: 24px;
-      border: 5px solid #ffffff;
-      border-radius: 10px;
+  }
+  &__info {
+    position: relative;
+    background-color: rgb(97, 214, 65);
+    width: 327px;
+    height: 71px;
+    margin-bottom: 50px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 24px;
+    border: 5px solid #ffffff;
+    border-radius: 10px;
+    transition: 0.2s;
+    cursor: pointer;
+    &:hover {
+      background-color: rgb(102, 221, 44);
+      border: 5px solid rgb(102, 221, 44);
+      border-radius: 5px;
       transition: 0.2s;
-      cursor: pointer;
-      span {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 19px;
-        font-size: 18px;
-        font-weight: bold;
-        color: rgb(24, 112, 0);
-      }
+    }
+  }
+  &__info-bet {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 19px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(24, 112, 0);
+  }
+  &__name {
+    font-size: 36px;
+    margin-bottom: 14px;
+  }
+  &__country {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  &__country-img {
+    margin-right: 10px;
+  }
+  &__desc-group {
+    margin-bottom: 40px;
+  }
+  &__desc-age, &__desc-weight {
+    text-align: center;
+    font-size: 24px;
+  }
+}
+.params {
+  position: relative;
+  text-align: center;
+  font-size: 24px;
+  &__info-input {
+    border: none;
+    font-size: 22px;
+    font-weight: 600;
+    width: 50px;
+    text-align: center;
+    border-bottom: 1px solid;
+  }
+  &__change {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 25px;
+    right: -45px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: 0.2s;
+    &:hover {
+      transition: 0.2s;
+    }
+    &::before {
+      position: absolute;
+      content: '';
+      top: -12px;
+      left: -8px;
+      width: 16px;
+      height: 4px;
+      border: 2px solid #cdcdcd;
+      border-radius: 2px;
+      border-bottom: transparent;
+      border-left: transparent;
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      bottom: -12px;
+      left: -8px;
+      width: 16px;
+      height: 4px;
+      border: 2px solid #cdcdcd;
+      border-radius: 2px;
+      border-top: transparent;
+      border-left: transparent;
+    }
+    &_change {
+      background-image: url('../img/chBtn.png');
       &:hover {
-        background-color: rgb(102, 221, 44);
-        border: 5px solid rgb(102, 221, 44);
-        border-radius: 5px;
-        transition: 0.2s;
+        background-image: url('../img/chBtn_active.png');
       }
     }
-    .name {
-      font-size: 36px;
-      margin-bottom: 14px;
+    &_done {
+      background-image: url('../img/doneBtn.png');
+      &:hover {
+        background-image: url('../img/doneBtn_active.png');
+      }
     }
-    .country {
+  }
+  &_small {
+    font-size: 18px;
+    line-height: 27px;
+    text-align: left;
+    .params__info-input {
       font-size: 18px;
-      margin-bottom: 40px;
-      img {
-        margin-right: 10px;
-        // width: 23px;
-      }
     }
-    .desc {
-      text-align: center;
-      font-size: 24px;
-      margin-bottom: 40px;
-      
-    }
-    .params {
-      position: relative;
-      text-align: center;
-      font-size: 24px;
-      input {
-        border: none;
-        font-size: 22px;
-        font-weight: 600;
-        width: 50px;
-        text-align: center;
-        border-bottom: 1px solid;
-      }
-      &__change {
-        position: absolute;
-        width: 18px;
-        height: 18px;
-        top: 25px;
-        right: -45px;
-        // background-image: url('../img/chBtn.png');
-        background-repeat: no-repeat;
-        cursor: pointer;
-        transition: 0.2s;
-        &:hover {
-          // background-image: url('../img/chBtn_active.png');
-          transition: 0.2s;
-
-        }
-        &::before {
-          position: absolute;
-          content: '';
-          top: -12px;
-          left: -8px;
-          width: 16px;
-          height: 4px;
-          border: 2px solid #cdcdcd;
-          border-radius: 2px;
-          border-bottom: transparent;
-          border-left: transparent;
-        }
-        &::after {
-          position: absolute;
-          content: '';
-          bottom: -12px;
-          left: -8px;
-          width: 16px;
-          height: 4px;
-          border: 2px solid #cdcdcd;
-          border-radius: 2px;
-          border-top: transparent;
-          border-left: transparent;
-        }
-        &_change {
-          background-image: url('../img/chBtn.png');
-          &:hover {
-            background-image: url('../img/chBtn_active.png');
-          }
-        }
-        &_done {
-          background-image: url('../img/doneBtn.png');
-          &:hover {
-            background-image: url('../img/doneBtn_active.png');
-          }
-        }
-      }
+    .params__change {
+      top: 20px;
+      right: 125px;
     }
   }
 }
