@@ -1,10 +1,10 @@
 .about {
   position: relative;
-  display: flex;
+  // display: flex;
   &__status {
     position: absolute;
     padding-bottom: 5px;
-    top: 10px;
+    top: 1167px;
     left: 50%;
     transform: translateX(-50%);
     width: 122px;
@@ -16,6 +16,19 @@
     color: #ffffff;
     transition: 0.2s;
     cursor: pointer;
+    @media (max-width: 1200px) {
+      width: 115px;
+      height: 46px;
+    }
+    @media (max-width: 991px) {
+      top: 873px;
+      width: 95px;
+      height: 40px;
+      font-size: 16px;
+    }
+    @media (max-width: 767px) {
+      display: none;
+    }
     &:hover {
         border-color: rgb(74, 74, 74);
         border-radius: 4px;
@@ -26,7 +39,6 @@
   &__item {
     display: flex;
     flex-direction: column;
-    flex-basis: 50%;
     align-items: center;
   }
   &__info {
@@ -42,6 +54,16 @@
     border-radius: 10px;
     transition: 0.2s;
     cursor: pointer;
+    @media (max-width: 1200px) {
+      width: 300px;
+      height: 65px;
+    }
+    @media (max-width: 991px) {
+      width: 220px;
+      height: 52px;
+      margin-bottom: 45px;
+      font-size: 20px;
+    }
     &:hover {
       background-color: rgb(102, 221, 44);
       border: 5px solid rgb(102, 221, 44);
@@ -57,10 +79,18 @@
     font-size: 18px;
     font-weight: bold;
     color: rgb(24, 112, 0);
+    @media (max-width: 991px) {
+      font-size: 16px;
+      transform: translateY(-45%);
+      right: 14px;
+    }
   }
   &__name {
     font-size: 36px;
     margin-bottom: 14px;
+    @media (max-width: 991px) {
+      font-size: 30px;
+    }
   }
   &__country {
     font-size: 18px;
@@ -71,16 +101,25 @@
   }
   &__desc-group {
     margin-bottom: 40px;
+    @media (max-width: 991px) {
+      padding: 0 20px;
+    }
   }
   &__desc-age, &__desc-weight {
     text-align: center;
     font-size: 24px;
+    @media (max-width: 991px) {
+      font-size: 20px;
+    }
   }
 }
 .params {
   position: relative;
   text-align: center;
   font-size: 24px;
+  @media (max-width: 991px) {
+    font-size: 20px;
+  }
   &__info-input {
     border: none;
     font-size: 22px;
@@ -88,6 +127,9 @@
     width: 50px;
     text-align: center;
     border-bottom: 1px solid;
+    @media (max-width: 991px) {
+      font-size: 18px;
+    }
   }
   &__change {
     position: absolute;
@@ -98,6 +140,9 @@
     background-repeat: no-repeat;
     cursor: pointer;
     transition: 0.2s;
+    @media (max-width: 991px) {
+      top: 20px;
+    }
     &:hover {
       transition: 0.2s;
     }

@@ -2,11 +2,46 @@ window.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
   const navLinks = document.querySelectorAll('.header__nav-link'),
-        navMenu = document.querySelectorAll('.header__nav-dropdown');
+        navMenu = document.querySelectorAll('.header__nav-dropdown'),
+        mobBtn = document.querySelector('.header__menu-btn'),
+        mobMenu = document.querySelector('.mobile-menu'),
+        mobLink = [...mobMenu.children],
+        mobDropdown = document.querySelectorAll('.mobile-menu__dropdown');
+
 
   const hideAll = () => {
     navMenu.forEach(item => item.style.display = 'none');
   }
+
+  mobBtn.addEventListener('click', () => {
+    const style = getComputedStyle(mobMenu);
+
+    if (style.display === 'none') {
+      mobMenu.style.display = 'block';
+      mobMenu.classList.add('fadeIn');
+      mobMenu.classList.remove('fadeOut');
+      mobBtn.style.backgroundImage = 'url("./img/cancel.svg")';
+    }
+    else {
+      mobMenu.classList.remove('fadeIn');
+      mobMenu.classList.add('fadeOut');
+      setTimeout(() => mobMenu.style.display = 'none', 500);      
+      mobBtn.style.backgroundImage = 'url("./img/menu.svg")';
+    }
+  });
+
+  mobLink.forEach((item, i) => {
+    item.addEventListener('click', () => {
+
+      if (mobDropdown[i].style.display !== 'flex') {
+        mobDropdown.forEach(item => item.style.display = 'none');
+        mobDropdown[i].style.display = 'flex';
+      }
+      else {
+        mobDropdown[i].style.display = 'none';
+      }
+    });
+  });
 
   hideAll();
 
@@ -27,10 +62,15 @@ window.addEventListener('DOMContentLoaded', () => {
   
 
   /////
-
-  const columnBtns = document.querySelectorAll('.wrap-btn'),
+  const columnBtns = document.querySelectorAll('.matches-header'),
         spanText = document.querySelectorAll('.wrap-btn__show'),
-        wrapper = document.querySelectorAll('.matches-column');
+        wrapper = document.querySelectorAll('.matches-column'),
+        matches = document.querySelectorAll('.matches');
+
+        // console.log(matches[0].offsetTop);
+        // console.log(document.querySelectorAll('.content-wrapper')[0].parentElement.offsetTop);
+        // console.log(matches[1].offsetTop);
+        // console.log(document.querySelectorAll('.content-wrapper')[1].parentElement.offsetTop);
 
   columnBtns.forEach((item, i) => {
     const matches = wrapper[i].querySelectorAll('.tournament');
@@ -54,21 +94,44 @@ window.addEventListener('DOMContentLoaded', () => {
   /////
 
   const popup = document.querySelector('.popup'),
-        rowItems = document.querySelectorAll('.match');
+        rowItems = document.querySelectorAll('.match'),
+        // closePopBtn = popup.querySelector('button');
+        closePopBtn = document.querySelector('#close');
   let show = false;
 
   rowItems.forEach((item) => {
-    item.addEventListener('click', () => {
+    item.addEventListener('click', (event) => {
 
       if (!show) {
         const target = item.parentNode.parentNode;
-
+        
         for (let i = 0; i < wrapper.length; i++) {
-          if (target === wrapper[i] && popup) {
-            popup.style.left = `${540 - 320 * i}px`;
+          // console.log(target.clientTop);
+          const width = parseInt(getComputedStyle(wrapper[i]).width.slice(0, -2));
+          
+          if (target === wrapper[i] && popup && document.body.clientWidth > 767) {
+
+
+            switch (i) {
+              case 0 :
+                popup.style.left = `${width}px`;
+                popup.style.display = 'flex';
+                break;
+              case 1 :
+                popup.style.left = `${width - 335}px`;
+                popup.style.display = 'flex';
+                break;
+            }
+          }
+
+          if (target === wrapper[i] && popup && document.body.clientWidth < 768) {
+            popup.style.left = `${(width - 316) / 2}px`;
+            popup.style.top = `${event.pageY - 1100}px`;
             popup.style.display = 'flex';
+            
           }
         }
+        
         setTimeout(() => show = true, 1);
       }      
     });
@@ -76,8 +139,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
   document.body.addEventListener('click', (event) => {
     const target = event.target.parentElement;
-
-    if (popup && show && !target.classList.value.includes('popup')) {
+  
+    if (popup && show && !target.classList.value.includes('popup') || event.target === closePopBtn) {
       popup.style.display = 'none';
       show = false;
     }
