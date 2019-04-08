@@ -53,7 +53,8 @@ input:focus {
     width: 540px;
   }
   @media (max-width: 575px) {
-    width: 95vw;
+    width: 100%;
+    padding: 0 15px
   }
   &_big {
     width: 1110px;
@@ -67,7 +68,8 @@ input:focus {
       width: 560px;
     }
     @media (max-width: 575px) {
-      width: 98vw;
+      width: 100%;
+      padding: 0 10px;
     }
   }
 }

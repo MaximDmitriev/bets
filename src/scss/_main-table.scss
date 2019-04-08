@@ -2,10 +2,46 @@
   display: flex;
   width: 990px;
   margin-top: 60px;
-
+  @media (max-width: 991px) {
+    width: 95vw;
+  }
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
   &__info {
     margin-left: 80px;
     margin-bottom: 50px;
+    @media (max-width: 1200px) {
+      width: 62%;
+    }
+    @media (max-width: 991px) {
+      margin-left: 10px;
+    }
+    @media (max-width: 767px) {
+      width: 98%;
+      margin-left: 0;
+      margin-top: 15px;
+    }
+  }
+}
+.fighters-list {
+  display: flex;
+  flex-direction: column;
+  @media (max-width: 767px) {
+    // border: 2px solid red;
+  }
+
+  &__btn {
+    display: none;
+    padding: 10px 10px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #fff;
+    border: 2px solid #f8f8f8;
+    @media (max-width: 767px) {
+      display: block;
+    }
   }
 }
 .fighter-item {
@@ -15,21 +51,45 @@
   padding-left: 20px;
   border-left: 5px solid transparent;
   cursor: pointer;
+  @media (max-width: 767px) {
+    // display: none;
+    height: 42px;
+    padding-left: 0px;
+    padding-top: 8px;
+    text-align: center;
+    border: 2px solid #f8f8f8;
+    border-top: transparent;
+    &:last-child {
+      margin-bottom: 15px;
+    }
+  }
   &:hover {
     background-color: #f8f8f8;
   }
   &_active {
     background-color: #f8f8f8;
-    border-color: #f9df4f;
+    border-left: 2px solid #f9df4f;
+    @media (max-width: 767px) {
+      border-bottom: 2px solid #f8f8f8;
+    }
   }
   &__name {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 5px;
+    @media (max-width: 767px) {
+      display: inline-block;
+      font-size: 16px;
+    }
   }
   &__country {
     font-size: 14px;
     margin-bottom: 30px;
+    @media (max-width: 767px) {
+      display: inline-block;
+      margin-bottom: 5px;
+      margin-left: 10px;
+    }
   }
   &__icon {
     width: 20px;
@@ -43,6 +103,13 @@
   padding-left: 60px;
   background-color: #f8f8f8;
   border-left: 12px solid #f9df4f;
+  @media (max-width: 991px) {
+    width: 100%;
+    padding-left: 15px;
+  }
+  @media (max-width: 575px) {
+    padding-left: 15px;
+  }
   &::before {
     content: '';
     position: absolute;
@@ -56,7 +123,9 @@
 }
 .fighter-info {
   display: flex;
-
+  @media (max-width: 991px) {
+    flex-direction: column;
+  }
 }
 .fighter-data {
   padding-right: 55px;
@@ -64,10 +133,17 @@
     font-size: 36px;
     margin-bottom: 10px;
     line-height: 1;
+    @media (max-width: 575px) {
+      font-size: 32px;
+    }
   }
   &__country {
     font-size: 18px;
     margin-bottom: 22px;
+    @media (max-width: 575px) {
+      font-size: 16px;
+      margin-bottom: 18px;
+    }
   }
   &__icon{
     margin-right: 10px;
@@ -76,6 +152,9 @@
   &__category {
     font-size: 24px;
     font-weight: 600;
+    @media (max-width: 575px) {
+      font-size: 20px;
+    }
   }
 }
 .fighter-params {
@@ -83,13 +162,31 @@
     font-size: 18px;
     margin-bottom: 30px;
     line-height: 27px;
+    @media (max-width: 575px) {
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 991px) {
+    width: 290px;
   }
 }
 .fighter-photo {
   display: flex;
   padding: 30px 0;
+  @media (max-width: 991px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   &__big {
     display: flex;
+    @media (max-width: 991px) {
+      margin-bottom: 20px;
+
+    }
+    @media (max-width: 767px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
   &__preview {
     display: flex;
@@ -103,12 +200,27 @@
   height: 300px;
   margin-right: 10px;
   border: 2px solid #aeaeae;
+  @media (max-width: 991px) {
+    max-width: 200px;
+  }
+  @media (max-width: 575px) {
+    max-height: 280px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
   &__img {
     margin: auto;
     width: 194px;
     height: 282px;
     object-fit: cover;
     object-position: center;
+    @media (max-width: 991px) {
+      max-width: 180px;
+    }
+    @media (max-width: 575px) {
+      max-height: 260px;
+    }
   }
   &_active {
     border-color: #000000;
@@ -149,4 +261,10 @@
   background-size: contain;
   background-repeat: no-repeat;
   cursor: pointer;
+}
+.show-list {
+  display: block;
+  @media(max-width: 767px) {
+    display: none;
+  }
 }

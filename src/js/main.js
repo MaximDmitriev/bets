@@ -8,24 +8,33 @@ window.addEventListener('DOMContentLoaded', () => {
         mobLink = [...mobMenu.children],
         mobDropdown = document.querySelectorAll('.mobile-menu__dropdown');
 
+  let showMob = false;
 
   const hideAll = () => {
     navMenu.forEach(item => item.style.display = 'none');
   }
 
   mobBtn.addEventListener('click', () => {
-    const style = getComputedStyle(mobMenu);
 
-    if (style.display === 'none') {
-      mobMenu.style.display = 'block';
+    if (!mobMenu.classList.contains('show')) {
+      mobMenu.classList.add('show');
       mobMenu.classList.add('fadeIn');
       mobMenu.classList.remove('fadeOut');
       mobBtn.style.backgroundImage = 'url("./img/cancel.svg")';
+      setTimeout(() => showMob = true, 1);
     }
-    else {
+
+  });
+
+  document.body.addEventListener('click', (event) => {
+
+    if (showMob && !event.target.classList.value.includes('mobile-menu')) {
       mobMenu.classList.remove('fadeIn');
       mobMenu.classList.add('fadeOut');
-      setTimeout(() => mobMenu.style.display = 'none', 500);      
+      setTimeout(() => {
+        mobMenu.classList.remove('show');
+        showMob = false;
+      }, 500);      
       mobBtn.style.backgroundImage = 'url("./img/menu.svg")';
     }
   });
@@ -64,16 +73,12 @@ window.addEventListener('DOMContentLoaded', () => {
   /////
   const columnBtns = document.querySelectorAll('.matches-header'),
         spanText = document.querySelectorAll('.wrap-btn__show'),
-        wrapper = document.querySelectorAll('.matches-column'),
-        matches = document.querySelectorAll('.matches');
+        wrapper = document.querySelectorAll('.matches-column');
 
-        // console.log(matches[0].offsetTop);
-        // console.log(document.querySelectorAll('.content-wrapper')[0].parentElement.offsetTop);
-        // console.log(matches[1].offsetTop);
-        // console.log(document.querySelectorAll('.content-wrapper')[1].parentElement.offsetTop);
 
   columnBtns.forEach((item, i) => {
     const matches = wrapper[i].querySelectorAll('.tournament');
+
     item.addEventListener('click', () => {
       if (spanText[i].textContent === 'спрятать') {
         
@@ -93,10 +98,29 @@ window.addEventListener('DOMContentLoaded', () => {
 
   /////
 
+  const listBtn = document.querySelector('.fighters-list__btn'),
+        listItems = document.querySelectorAll('.fighter-item');
+
+  listItems.forEach(item => item.classList.add('show-list'));
+
+  if (listBtn) {
+    listBtn.addEventListener('click', () => {
+      if (listItems[0].classList.contains('show-list')) {
+        listItems.forEach(item => item.classList.remove('show-list'));
+      }
+      else {
+        listItems.forEach(item => item.classList.add('show-list'));
+      }
+    });
+  }
+
+
+  /////
+
   const popup = document.querySelector('.popup'),
         rowItems = document.querySelectorAll('.match'),
-        // closePopBtn = popup.querySelector('button');
         closePopBtn = document.querySelector('#close');
+
   let show = false;
 
   rowItems.forEach((item) => {
@@ -106,11 +130,9 @@ window.addEventListener('DOMContentLoaded', () => {
         const target = item.parentNode.parentNode;
         
         for (let i = 0; i < wrapper.length; i++) {
-          // console.log(target.clientTop);
           const width = parseInt(getComputedStyle(wrapper[i]).width.slice(0, -2));
           
           if (target === wrapper[i] && popup && document.body.clientWidth > 767) {
-
 
             switch (i) {
               case 0 :

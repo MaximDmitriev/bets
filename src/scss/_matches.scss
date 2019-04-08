@@ -12,6 +12,12 @@
       align-self: center;
     }
   }
+  &_outstand {
+    width: 100%;
+    @media (max-width: 1200px) {
+    width: 100%;
+    }
+  }
   @media (max-width: 1200px) {
     width: 108%;
   }
