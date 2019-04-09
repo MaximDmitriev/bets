@@ -2,8 +2,9 @@
   position: relative;
   &__status {
     position: absolute;
+    z-index: 5;
     padding-bottom: 5px;
-    top: 956px;
+    top: 502px;
     left: 50%;
     transform: translateX(-50%);
     width: 122px;
@@ -20,7 +21,7 @@
       height: 46px;
     }
     @media (max-width: 991px) {
-      top: 662px;
+      top: 352px;
       width: 95px;
       height: 40px;
       font-size: 16px;
@@ -42,7 +43,8 @@
   }
   &__info {
     position: relative;
-    background-color: rgb(97, 214, 65);
+    // background-color: rgb(97, 214, 65);
+    background-color: rgb(88, 88, 88);
     width: 327px;
     height: 71px;
     margin-bottom: 35px;
@@ -68,10 +70,17 @@
       display: none;
     }
     &:hover {
-      background-color: rgb(102, 221, 44);
-      border: 5px solid rgb(102, 221, 44);
+      background-color: rgb(74, 74, 74);
+      border: 5px solid rgb(74, 74, 74);
       border-radius: 5px;
       transition: 0.2s;
+    }
+    &_active {
+      background-color: rgb(97, 214, 65);
+      &:hover {
+        background-color: rgb(97, 214, 65);
+        border: none;
+      }
     }
   }
   &__info-bet {
@@ -80,8 +89,9 @@
     transform: translateY(-50%);
     right: 19px;
     font-size: 18px;
-    font-weight: bold;
-    color: rgb(24, 112, 0);
+    // font-weight: bold;
+    // color: rgb(24, 112, 0);
+    color: #ffffff;
     @media (max-width: 991px) {
       font-size: 16px;
       transform: translateY(-45%);
@@ -91,6 +101,7 @@
   &__name {
     font-size: 36px;
     margin-bottom: 14px;
+    margin-top: 20px;
     @media (max-width: 991px) {
       font-size: 30px;
     }

@@ -310,7 +310,7 @@ input:focus {
   display: none;
   position: absolute;
   z-index: 5;
-  top: 45px;
+  top: 40px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -380,6 +380,12 @@ input:focus {
 
 @media (max-width: 767px) {
   .fighters__item {
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 767px) {
+  .fighters {
     margin-top: 5px;
   }
 }
@@ -547,8 +553,9 @@ input:focus {
 
 .about__status {
   position: absolute;
+  z-index: 5;
   padding-bottom: 5px;
-  top: 956px;
+  top: 502px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -573,7 +580,7 @@ input:focus {
 
 @media (max-width: 991px) {
   .about__status {
-    top: 662px;
+    top: 352px;
     width: 95px;
     height: 40px;
     font-size: 16px;
@@ -609,7 +616,7 @@ input:focus {
 
 .about__info {
   position: relative;
-  background-color: #61d641;
+  background-color: #585858;
   width: 327px;
   height: 71px;
   margin-bottom: 35px;
@@ -647,11 +654,20 @@ input:focus {
 }
 
 .about__info:hover {
-  background-color: #66dd2c;
-  border: 5px solid #66dd2c;
+  background-color: #4a4a4a;
+  border: 5px solid #4a4a4a;
   border-radius: 5px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+
+.about__info_active {
+  background-color: #61d641;
+}
+
+.about__info_active:hover {
+  background-color: #61d641;
+  border: none;
 }
 
 .about__info-bet {
@@ -661,8 +677,7 @@ input:focus {
           transform: translateY(-50%);
   right: 19px;
   font-size: 18px;
-  font-weight: bold;
-  color: #187000;
+  color: #ffffff;
 }
 
 @media (max-width: 991px) {
@@ -677,6 +692,7 @@ input:focus {
 .about__name {
   font-size: 36px;
   margin-bottom: 14px;
+  margin-top: 20px;
 }
 
 @media (max-width: 991px) {
@@ -1422,6 +1438,7 @@ input:focus {
   width: 1110px;
   padding: 30px 0;
   background-color: #f7f7f7;
+  margin-top: 25px;
 }
 
 @media (max-width: 991px) {
@@ -2183,7 +2200,7 @@ input:focus {
 
 .buttons__info {
   position: relative;
-  background-color: #61d641;
+  background-color: #585858;
   width: 327px;
   height: 71px;
   color: #ffffff;
@@ -2218,11 +2235,20 @@ input:focus {
 }
 
 .buttons__info:hover {
-  background-color: #66dd2c;
-  border: 5px solid #66dd2c;
+  background-color: #585858;
+  border: 5px solid #585858;
   border-radius: 5px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+
+.buttons__info_active {
+  background-color: #61d641;
+}
+
+.buttons__info_active:hover {
+  background-color: #61d641;
+  border: none;
 }
 
 .buttons__info-bet {
@@ -2232,8 +2258,7 @@ input:focus {
           transform: translateY(-50%);
   right: 19px;
   font-size: 18px;
-  font-weight: bold;
-  color: #187000;
+  color: #ffffff;
 }
 
 @media (max-width: 991px) {
@@ -2287,4 +2312,81 @@ input:focus {
   background-color: #4a4a4a;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+
+.next-fight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  text-transform: uppercase;
+  font-weight: bold;
+  top: 580px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media (max-width: 991px) {
+  .next-fight {
+    top: 409px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 767px) {
+  .next-fight {
+    display: none;
+  }
+}
+
+.next-fight_mobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .next-fight_mobile {
+    display: block;
+    position: unset;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+}
+
+.next-fight_disabled {
+  color: #edeaea;
+}
+
+.next-fight__img {
+  width: 16px;
+  -webkit-transform: rotateZ(-90deg);
+          transform: rotateZ(-90deg);
+}
+
+@media (max-width: 991px) {
+  .next-fight__img {
+    width: 12px;
+  }
+}
+
+.next-fight__href {
+  margin-right: 6px;
+}
+
+.btn-active {
+  background-color: #61d641;
+}
+
+.btn-active:hover {
+  background-color: #61d641;
+  border: none;
 }

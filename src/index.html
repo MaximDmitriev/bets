@@ -171,38 +171,14 @@
   <div class="section">
     <div class="content-wrapper wrap">
       <button class="about__status">ничья</button>
+      <div class="next-fight">
+        <a href="#" class="next-fight__href">Следующий бой</a>
+        <img class="next-fight__img" src="./img/arrow.svg" alt="arrow">
+      </div>
       <div class="content-wrapper__column">
         <div class="fighters">
           <div class="fighters__item">
             <div class="fighters__big-slider fighters__big-slider_img-1">
-              <div class="fighters__big-slide">
-                <img class="fighters__big-image" src="./img/slider/slide1.jpg" alt="slide">
-              </div>
-              <div class="fighters__big-slide">
-                <img class="fighters__big-image" src="./img/slider/slide2.jpg" alt="slide">
-              </div>
-              <div class="fighters__big-slide">
-                <img class="fighters__big-image" src="./img/slider/slide1.jpg" alt="slide">
-              </div>
-              <div class="fighters__big-slide">
-                <img class="fighters__big-image" src="./img/slider/slide2.jpg" alt="slide">
-              </div>
-              <div class="fighters__big-slide">
-                <img class="fighters__big-image" src="./img/slider/slide1.jpg" alt="slide">
-              </div>
-              <div class="fighters__big-slide">
-                <img class="fighters__big-image" src="./img/slider/slide2.jpg" alt="slide">
-              </div>
-              <div class="fighters__big-slide">
-                <img class="fighters__big-image" src="./img/slider/slide1.jpg" alt="slide">
-              </div>
-              <div class="fighters__big-slide">
-                <img class="fighters__big-image" src="./img/slider/slide2.jpg" alt="slide">
-              </div>
-            </div>
-          </div>
-          <div class="fighters__item">
-            <div class="fighters__big-slider fighters__big-slider_img-3">
               <div class="fighters__big-slide">
                 <img class="fighters__big-image" src="./img/slider/slide1.jpg" alt="slide">
               </div>
@@ -245,7 +221,6 @@
             <div class="params">
               <p class="params__info">Вес: <span class="params__info-number">65</span><input class="params__info-input"> кг</p>
               <p class="params__info">Рост: <span class="params__info-number">175</span><input class="params__info-input"> см</p>
-              <div class="params__change params__change_change"></div>
             </div>
           </div>  
         </div>
@@ -470,39 +445,12 @@
         <button class="buttons__info">победа<span class="buttons__info-bet">~1.16</span></button>
         <button class="buttons__status">ничья</button>
         <button class="buttons__info">победа<span class="buttons__info-bet">~3.57</span></button>
+        <a href="#" class="next-fight next-fight_mobile">Следующий бой <img class="next-fight__img" src="./img/arrow.svg" alt="arrow"></a>
       </div>
       <div class="content-wrapper__column">
         <div class="fighters">
           <div class="fighters__item">
             <div class="fighters__big-slider fighters__big-slider_img-2">
-              <div class="fighters__big-slide">
-                <img class="fighters__big-image" src="./img/slider/slide3.jpg" alt="slide">
-              </div>
-              <div class="fighters__big-slide">
-                <img class="fighters__big-image" src="./img/slider/slide4.jpg" alt="slide">
-              </div>
-              <div class="fighters__big-slide">
-                <img class="fighters__big-image" src="./img/slider/slide3.jpg" alt="slide">
-              </div>
-              <div class="fighters__big-slide">
-                <img class="fighters__big-image" src="./img/slider/slide4.jpg" alt="slide">
-              </div>
-              <div class="fighters__big-slide">
-                <img class="fighters__big-image" src="./img/slider/slide3.jpg" alt="slide">
-              </div>
-              <div class="fighters__big-slide">
-                <img class="fighters__big-image" src="./img/slider/slide4.jpg" alt="slide">
-              </div>
-              <div class="fighters__big-slide">
-                <img class="fighters__big-image" src="./img/slider/slide3.jpg" alt="slide">
-              </div>
-              <div class="fighters__big-slide">
-                <img class="fighters__big-image" src="./img/slider/slide4.jpg" alt="slide">
-              </div>
-            </div>
-          </div>
-          <div class="fighters__item">
-            <div class="fighters__big-slider fighters__big-slider_img-4">
               <div class="fighters__big-slide">
                 <img class="fighters__big-image" src="./img/slider/slide3.jpg" alt="slide">
               </div>
@@ -545,7 +493,6 @@
             <div class="params">
               <p class="params__info">Вес: <span class="params__info-number">65</span><input class="params__info-input"> кг</p>
               <p class="params__info">Рост: <span class="params__info-number">175</span><input class="params__info-input"> см</p>
-              <div class="params__change params__change_change"></div>
             </div>
           </div>
         </div>
@@ -853,21 +800,21 @@
 
       // нижние слайдеры 
 
-      $('.fighters__big-slider_img-3').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: false,
-        swipe: true
-      });
+      // $('.fighters__big-slider_img-3').slick({
+      //   slidesToShow: 1,
+      //   slidesToScroll: 1,
+      //   arrows: false,
+      //   fade: false,
+      //   swipe: true
+      // });
 
-      $('.fighters__big-slider_img-4').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: false,
-        swipe: true
-      });
+      // $('.fighters__big-slider_img-4').slick({
+      //   slidesToShow: 1,
+      //   slidesToScroll: 1,
+      //   arrows: false,
+      //   fade: false,
+      //   swipe: true
+      // });
     });
 
 

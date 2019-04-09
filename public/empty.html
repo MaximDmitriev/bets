@@ -170,38 +170,14 @@
   <div class="section">
     <div class="content-wrapper wrap">
       <button class="about__status">ничья</button>
+      <div class="next-fight">
+        <a href="#" class="next-fight__href">Следующий бой</a>
+        <img class="next-fight__img" src="./img/arrow.svg" alt="arrow">
+      </div>
       <div class="content-wrapper__column">
         <div class="fighters">
           <div class="fighters__item">
             <div class="fighters__big-slider fighters__big-slider_img-1">
-              <div class="fighters__big-slide">
-                <img class="fighters__big-image" src="./img/slider/slide1.jpg" alt="slide">
-              </div>
-              <div class="fighters__big-slide">
-                <img class="fighters__big-image" src="./img/slider/slide2.jpg" alt="slide">
-              </div>
-              <div class="fighters__big-slide">
-                <img class="fighters__big-image" src="./img/slider/slide1.jpg" alt="slide">
-              </div>
-              <div class="fighters__big-slide">
-                <img class="fighters__big-image" src="./img/slider/slide2.jpg" alt="slide">
-              </div>
-              <div class="fighters__big-slide">
-                <img class="fighters__big-image" src="./img/slider/slide1.jpg" alt="slide">
-              </div>
-              <div class="fighters__big-slide">
-                <img class="fighters__big-image" src="./img/slider/slide2.jpg" alt="slide">
-              </div>
-              <div class="fighters__big-slide">
-                <img class="fighters__big-image" src="./img/slider/slide1.jpg" alt="slide">
-              </div>
-              <div class="fighters__big-slide">
-                <img class="fighters__big-image" src="./img/slider/slide2.jpg" alt="slide">
-              </div>
-            </div>
-          </div>
-          <div class="fighters__item">
-            <div class="fighters__big-slider fighters__big-slider_img-3">
               <div class="fighters__big-slide">
                 <img class="fighters__big-image" src="./img/slider/slide1.jpg" alt="slide">
               </div>
@@ -235,43 +211,11 @@
           </div>  
         </div>
       </div>
-      <div class="buttons wrap">
-        <button class="buttons__info">победа</button>
-        <button class="buttons__status">ничья</button>
-        <button class="buttons__info">победа</button>
-      </div>
+
       <div class="content-wrapper__column">
         <div class="fighters">
           <div class="fighters__item">
             <div class="fighters__big-slider fighters__big-slider_img-2">
-              <div class="fighters__big-slide">
-                <img class="fighters__big-image" src="./img/slider/slide3.jpg" alt="slide">
-              </div>
-              <div class="fighters__big-slide">
-                <img class="fighters__big-image" src="./img/slider/slide4.jpg" alt="slide">
-              </div>
-              <div class="fighters__big-slide">
-                <img class="fighters__big-image" src="./img/slider/slide3.jpg" alt="slide">
-              </div>
-              <div class="fighters__big-slide">
-                <img class="fighters__big-image" src="./img/slider/slide4.jpg" alt="slide">
-              </div>
-              <div class="fighters__big-slide">
-                <img class="fighters__big-image" src="./img/slider/slide3.jpg" alt="slide">
-              </div>
-              <div class="fighters__big-slide">
-                <img class="fighters__big-image" src="./img/slider/slide4.jpg" alt="slide">
-              </div>
-              <div class="fighters__big-slide">
-                <img class="fighters__big-image" src="./img/slider/slide3.jpg" alt="slide">
-              </div>
-              <div class="fighters__big-slide">
-                <img class="fighters__big-image" src="./img/slider/slide4.jpg" alt="slide">
-              </div>
-            </div>
-          </div>
-          <div class="fighters__item">
-            <div class="fighters__big-slider fighters__big-slider_img-4">
               <div class="fighters__big-slide">
                 <img class="fighters__big-image" src="./img/slider/slide3.jpg" alt="slide">
               </div>
@@ -305,6 +249,14 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="buttons wrap">
+      <button class="buttons__info">победа</button>
+      <button class="buttons__status">ничья</button>
+      <button class="buttons__info">победа</button>
+      <a href="#" class="next-fight next-fight_mobile">Следующий бой <img class="next-fight__img" src="./img/arrow.svg" alt="arrow"></a>
     </div>
   </div>
   <div class="section">
@@ -359,21 +311,21 @@
 
       // нижние слайдеры 
 
-      $('.fighters__big-slider_img-3').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: false,
-        swipe: true
-      });
+    //   $('.fighters__big-slider_img-3').slick({
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    //     arrows: false,
+    //     fade: false,
+    //     swipe: true
+    //   });
 
-      $('.fighters__big-slider_img-4').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: false,
-        swipe: true
-      });
+    //   $('.fighters__big-slider_img-4').slick({
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    //     arrows: false,
+    //     fade: false,
+    //     swipe: true
+    //   });
     });
 
 
