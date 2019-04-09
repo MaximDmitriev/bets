@@ -1,10 +1,9 @@
 .about {
   position: relative;
-  // display: flex;
   &__status {
     position: absolute;
     padding-bottom: 5px;
-    top: 1167px;
+    top: 1106px;
     left: 50%;
     transform: translateX(-50%);
     width: 122px;
@@ -21,7 +20,7 @@
       height: 46px;
     }
     @media (max-width: 991px) {
-      top: 873px;
+      top: 811px;
       width: 95px;
       height: 40px;
       font-size: 16px;
@@ -46,7 +45,8 @@
     background-color: rgb(97, 214, 65);
     width: 327px;
     height: 71px;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
+    margin-top: 10px;
     color: #ffffff;
     text-transform: uppercase;
     font-size: 24px;
@@ -61,8 +61,11 @@
     @media (max-width: 991px) {
       width: 220px;
       height: 52px;
-      margin-bottom: 45px;
+      margin-bottom: 15px;
       font-size: 20px;
+    }
+    @media (max-width: 767px) {
+      display: none;
     }
     &:hover {
       background-color: rgb(102, 221, 44);
@@ -91,18 +94,27 @@
     @media (max-width: 991px) {
       font-size: 30px;
     }
+    @media (max-width: 767px) {
+      margin-top: 10px;
+    }
   }
   &__country {
     font-size: 18px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    @media (max-width: 767px) {
+      margin-bottom: 10px;
+    }
   }
   &__country-img {
     margin-right: 10px;
   }
   &__desc-group {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     @media (max-width: 991px) {
       padding: 0 20px;
+    }
+    @media (max-width: 767px) {
+      margin-bottom: 10px;
     }
   }
   &__desc-age, &__desc-weight {
