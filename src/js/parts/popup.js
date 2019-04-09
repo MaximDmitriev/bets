@@ -13,12 +13,12 @@ const popup = () => {
         
         matches.forEach(item => item.style.display = 'none');
         spanText[i].textContent = 'показать';
-        wrapper[i].querySelector('img').style.transform = 'rotate(180deg)';
+        wrapper[i].querySelector('img').style.transform = 'rotate(0deg)';
       }
       else {
         matches.forEach(item => item.style.display = 'block');
         spanText[i].textContent = 'спрятать';
-        wrapper[i].querySelector('img').style.transform = 'rotate(0deg)';
+        wrapper[i].querySelector('img').style.transform = 'rotate(180deg)';
       }
     });
   });

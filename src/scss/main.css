@@ -164,6 +164,13 @@ input:focus {
   font-size: 16px;
 }
 
+@media (max-width: 767px) {
+  .header {
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+}
+
 .header__nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -368,6 +375,7 @@ input:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 10px 0;
 }
 
 @media (max-width: 767px) {
@@ -540,7 +548,7 @@ input:focus {
 .about__status {
   position: absolute;
   padding-bottom: 5px;
-  top: 1106px;
+  top: 956px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -565,7 +573,7 @@ input:focus {
 
 @media (max-width: 991px) {
   .about__status {
-    top: 811px;
+    top: 662px;
     width: 95px;
     height: 40px;
     font-size: 16px;
@@ -802,19 +810,19 @@ input:focus {
 }
 
 .params__change_change {
-  background-image: url("../img/chBtn.png");
+  background-image: url("../img/edit-pencil.svg");
 }
 
 .params__change_change:hover {
-  background-image: url("../img/chBtn_active.png");
+  background-image: url("../img/edit-pencil-hover.svg");
 }
 
 .params__change_done {
-  background-image: url("../img/doneBtn.png");
+  background-image: url("../img/edit-check.svg");
 }
 
 .params__change_done:hover {
-  background-image: url("../img/doneBtn_active.png");
+  background-image: url("../img/edit-check-hover.svg");
 }
 
 .params_small {
@@ -894,6 +902,7 @@ input:focus {
   .matches-column {
     min-width: 538px;
     padding: 0 10px;
+    margin-bottom: 7px;
   }
 }
 
@@ -1022,7 +1031,7 @@ input:focus {
 
 .wrap-btn__img {
   margin-left: 5px;
-  height: 11px;
+  height: 14px;
 }
 
 @media (max-width: 991px) {
@@ -1106,6 +1115,14 @@ input:focus {
 
 .match:hover {
   outline: 1px solid #7c7c7c;
+}
+
+.match_noselect {
+  outline: none;
+}
+
+.match_noselect:hover {
+  outline: none;
 }
 
 .match__date {
@@ -1481,6 +1498,10 @@ input:focus {
   }
 }
 
+.footer__logo-image {
+  width: 80px;
+}
+
 @media (max-width: 991px) {
   .footer__logo-image {
     width: 55px;
@@ -1797,7 +1818,6 @@ input:focus {
 
 .fighter-item__name {
   font-size: 18px;
-  font-weight: 600;
   margin-bottom: 5px;
 }
 
@@ -2151,18 +2171,13 @@ input:focus {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-@media (max-width: 575px) {
-  .buttons {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -2171,8 +2186,6 @@ input:focus {
   background-color: #61d641;
   width: 327px;
   height: 71px;
-  margin-bottom: 35px;
-  margin-top: 10px;
   color: #ffffff;
   text-transform: uppercase;
   font-size: 24px;
@@ -2194,7 +2207,6 @@ input:focus {
   .buttons__info {
     width: 220px;
     height: 52px;
-    margin-bottom: 15px;
     font-size: 20px;
   }
 }
@@ -2235,7 +2247,6 @@ input:focus {
 
 .buttons__status {
   padding-bottom: 3px;
-  margin-bottom: 3px;
   width: 122px;
   height: 51px;
   border-radius: 8px;

@@ -3,7 +3,7 @@
   &__status {
     position: absolute;
     padding-bottom: 5px;
-    top: 1106px;
+    top: 956px;
     left: 50%;
     transform: translateX(-50%);
     width: 122px;
@@ -20,7 +20,7 @@
       height: 46px;
     }
     @media (max-width: 991px) {
-      top: 811px;
+      top: 662px;
       width: 95px;
       height: 40px;
       font-size: 16px;
@@ -183,15 +183,15 @@
       border-left: transparent;
     }
     &_change {
-      background-image: url('../img/chBtn.png');
+      background-image: url('../img/edit-pencil.svg');
       &:hover {
-        background-image: url('../img/chBtn_active.png');
+        background-image: url('../img/edit-pencil-hover.svg');
       }
     }
     &_done {
-      background-image: url('../img/doneBtn.png');
+      background-image: url('../img/edit-check.svg');
       &:hover {
-        background-image: url('../img/doneBtn_active.png');
+        background-image: url('../img/edit-check-hover.svg');
       }
     }
   }

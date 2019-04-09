@@ -32,6 +32,7 @@
   @media (max-width: 767px) {
     min-width: 538px;
     padding: 0 10px;
+    margin-bottom: 7px;
   }
   @media (max-width: 575px) {
     min-width: 300px;
@@ -107,7 +108,7 @@
   }
   &__img {
     margin-left: 5px;
-    height: 11px;
+    height: 14px;
     @media (max-width: 991px) {
       height: 8px;
     }
@@ -157,6 +158,12 @@
   }
   &:hover {
     outline: 1px solid #7c7c7c;
+  }
+  &_noselect {
+    outline: none;
+    &:hover {
+      outline: none;
+    }
   }
   &__date {
     width: 65px;
